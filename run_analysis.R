@@ -9,17 +9,18 @@ unzip(zipfile="./Download/Data.zip",exdir="./Download")
 #  Read in the Data Set
 #
 codebook <- Pandoc$new("Codebook","M. Carmichael")
-text1 <- "Objectives Overview
-1) Merges the training and the test sets to create one data set.
-2) Extracts only the measurements on the mean and standard deviation for each measurement.
-3) Uses descriptive activity names to name the activities in the data set
-4) Appropriately labels the data set with descriptive variable names.
+text1 <- "Objectives Overview\n\n
+1) Merges the training and the test sets to create one data set.\n
+2) Extracts only the measurements on the mean and standard deviation 
+for each measurement.\n
+3) Uses descriptive activity names to name the activities in the data set\n
+4) Appropriately labels the data set with descriptive variable names.\n
 5) From the data set in step 4, creates a second, independent tidy 
-data set with the average of each variable for each activity and each subject
+data set with the average of each variable for each activity and each subject\n
 6) As an additional objective, the code book needs to update with 
 new data or analysis. For this reason the code book is being generated
 in the run_analysis.R work, which documents the code as well as updating
-the runbook."
+the runbook.\n"
 
 codebook$add.paragraph(text1)
  
@@ -44,7 +45,7 @@ to be modified.  To merge the data sets we
 3) Add the activity data (as columns) to the test/ train data
 4) combind the test/train data sets into the combind data set 
 \n\n
-data set combind
+data set combind information
 
 "
 codebook$add.paragraph(text1)
@@ -159,11 +160,20 @@ readme <- Pandoc$new("README","M.Carmichael")
 
 text1 <- "README
 
-Getting and Cleaning Data Course Projectless 
+Getting and Cleaning Data Course Project 
 
-Running the script 'run_analysis.R' will generate the tidydata.csv dataset,
-in addition will create the Codebook, which describes the R script in detail
-the process, and the methodology. 
+The objective of this project, described below, is to write an R script
+(run_analysis.R) which cleans, combinds, extracts from a dataset and produces
+a data set (tidydata.csv) which follows a tidy data set standard.  This script
+is generated on a Ubuntu linux system.  There are a number of ways to run
+the script, in my case I used the source(run_analysis.R) call in R.
+This will produce a Download directory and a plots directory, (though no 
+plots are produced).
+The script also produces this file (README) and the Codebook file which
+describes the running of the script and output in more detail.
+
+Project Description
+
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 
 One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:

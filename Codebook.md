@@ -1,20 +1,30 @@
 ---
 author:
 - 'M. Carmichael'
-date: 'Sat Nov 5 22:27:35 2016'
+date: 'Sat Nov 5 23:15:29 2016'
 title: Codebook
 ...
 
-Objectives Overview 1) Merges the training and the test sets to create
-one data set. 2) Extracts only the measurements on the mean and standard
-deviation for each measurement. 3) Uses descriptive activity names to
-name the activities in the data set 4) Appropriately labels the data set
-with descriptive variable names. 5) From the data set in step 4, creates
-a second, independent tidy data set with the average of each variable
-for each activity and each subject 6) As an additional objective, the
-code book needs to update with new data or analysis. For this reason the
-code book is being generated in the run\_analysis.R work, which
-documents the code as well as updating the runbook.
+Objectives Overview
+
+1)  Merges the training and the test sets to create one data set.
+
+2)  Extracts only the measurements on the mean and standard deviation
+    for each measurement.
+
+3)  Uses descriptive activity names to name the activities in the data
+    set
+
+4)  Appropriately labels the data set with descriptive variable names.
+
+5)  From the data set in step 4, creates a second, independent tidy data
+    set with the average of each variable for each activity and each
+    subject
+
+6)  As an additional objective, the code book needs to update with new
+    data or analysis. For this reason the code book is being generated
+    in the run\_analysis.R work, which documents the code as well as
+    updating the runbook.
 
 Objective 1 - merge the training and testing data sets.
 
@@ -37,7 +47,7 @@ sets we 1) Download the main data (test/train) 2) Add the subject data
 columns) to the test/ train data 4) combind the test/train data sets
 into the combind data set
 
-data set combind
+data set combind information
 
 Objective 3/4 In order to optomize Objective 2, I will do Objective 3/4
 renaming/labeling first. So take the number (which are now combined in

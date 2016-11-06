@@ -1,27 +1,36 @@
 ---
 author:
 - 'M.Carmichael'
-date: 'Sat Nov 5 22:28:02 2016'
+date: 'Sat Nov 5 23:15:57 2016'
 title: README
 ...
 
 README
 
-Getting and Cleaning Data Course Projectless
+Getting and Cleaning Data Course Project
 
-Running the script 'run\_analysis.R' will generate the tidydata.csv
-dataset, in addition will create the Codebook, which describes the R
-script in detail the process, and the methodology. The purpose of this
-project is to demonstrate your ability to collect, work with, and clean
-a data set. The goal is to prepare tidy data that can be used for later
-analysis. You will be graded by your peers on a series of yes/no
-questions related to the project. You will be required to submit: 1) a
-tidy data set as described below, 2) a link to a Github repository with
-your script for performing the analysis, and 3) a code book that
-describes the variables, the data, and any transformations or work that
-you performed to clean up the data called CodeBook.md. You should also
-include a README.md in the repo with your scripts. This repo explains
-how all of the scripts work and how they are connected.
+The objective of this project, described below, is to write an R script
+(run\_analysis.R) which cleans, combinds, extracts from a dataset and
+produces a data set (tidydata.csv) which follows a tidy data set
+standard. This script is generated on a Ubuntu linux system. There are a
+number of ways to run the script, in my case I used the
+source(run\_analysis.R) call in R. This will produce a Download
+directory and a plots directory, (though no plots are produced). The
+script also produces this file (README) and the Codebook file which
+describes the running of the script and output in more detail.
+
+Project Description
+
+The purpose of this project is to demonstrate your ability to collect,
+work with, and clean a data set. The goal is to prepare tidy data that
+can be used for later analysis. You will be graded by your peers on a
+series of yes/no questions related to the project. You will be required
+to submit: 1) a tidy data set as described below, 2) a link to a Github
+repository with your script for performing the analysis, and 3) a code
+book that describes the variables, the data, and any transformations or
+work that you performed to clean up the data called CodeBook.md. You
+should also include a README.md in the repo with your scripts. This repo
+explains how all of the scripts work and how they are connected.
 
 One of the most exciting areas in all of data science right now is
 wearable computing - see for example this article . Companies like
