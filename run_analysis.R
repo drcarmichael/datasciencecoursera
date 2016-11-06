@@ -135,7 +135,7 @@ text1 <- "Objective 5
 The tidydata is created by selecting the appropraite data from the combined
 data, then renaming the final dataset, called tidydata, then applying 
 the mean function (for the average) of the variables. After which we write 
-the file\n\n"
+the file, (In the submission instrucitons we add row.name=FALSE)\n\n"
 
 codebook$add.paragraph(text1)
 
@@ -148,7 +148,7 @@ colnames(tidydata) <- tidynames
 #
 #  write the data set
 #
-write.table(tidydata,file="tidydata.csv",sep=",")
+write.table(tidydata,file="tidydata.csv",sep=",",row.name=FALSE)
 codebook$add(head(tidydata))
 
 codebook$format <- 'md'
@@ -169,6 +169,8 @@ is generated on a Ubuntu linux system.  There are a number of ways to run
 the script, in my case I used the source(run_analysis.R) call in R.
 This will produce a Download directory and a plots directory, (though no 
 plots are produced).
+
+
 The script also produces this file (README) and the Codebook file which
 describes the running of the script and output in more detail.
 

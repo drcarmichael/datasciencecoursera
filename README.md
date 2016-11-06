@@ -1,7 +1,7 @@
 ---
 author:
 - 'M.Carmichael'
-date: 'Sat Nov 5 23:23:36 2016'
+date: 'Sun Nov 6 12:02:21 2016'
 title: README
 ...
 
@@ -15,8 +15,9 @@ produces a data set (tidydata.csv) which follows a tidy data set
 standard. This script is generated on a Ubuntu linux system. There are a
 number of ways to run the script, in my case I used the
 source(run\_analysis.R) call in R. This will produce a Download
-directory and a plots directory, (though no plots are produced). The
-script also produces this file (README) and the Codebook file which
+directory and a plots directory, (though no plots are produced).
+
+The script also produces this file (README) and the Codebook file which
 describes the running of the script and output in more detail.
 
 Project Description

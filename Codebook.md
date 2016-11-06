@@ -1,7 +1,7 @@
 ---
 author:
 - 'M. Carmichael'
-date: 'Sat Nov 5 23:23:09 2016'
+date: 'Sun Nov 6 12:01:43 2016'
 title: Codebook
 ...
 
@@ -575,7 +575,8 @@ selected column numbers
 Objective 5 The tidydata is created by selecting the appropraite data
 from the combined data, then renaming the final dataset, called
 tidydata, then applying the mean function (for the average) of the
-variables. After which we write the file
+variables. After which we write the file, (In the submission
+instrucitons we add row.name=FALSE)
 
        activity        subject    timebodyacceleratormeanx
   ------------------- ---------- --------------------------
