@@ -1,114 +1,127 @@
-## Introduction
-
-This assignment uses data from
-the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
-Learning Repository</a>, a popular repository for machine learning
-datasets. In particular, we will be using the "Individual household
-electric power consumption Data Set" which I have made available on
-the course web site:
-
-
-* <b>Dataset</b>: <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
-
-* <b>Description</b>: Measurements of electric power consumption in
-one household with a one-minute sampling rate over a period of almost
-4 years. Different electrical quantities and some sub-metering values
-are available.
-
-
-The following descriptions of the 9 variables in the dataset are taken
-from
-the <a href="https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption">UCI
-web site</a>:
-
-<ol>
-<li><b>Date</b>: Date in format dd/mm/yyyy </li>
-<li><b>Time</b>: time in format hh:mm:ss </li>
-<li><b>Global_active_power</b>: household global minute-averaged active power (in kilowatt) </li>
-<li><b>Global_reactive_power</b>: household global minute-averaged reactive power (in kilowatt) </li>
-<li><b>Voltage</b>: minute-averaged voltage (in volt) </li>
-<li><b>Global_intensity</b>: household global minute-averaged current intensity (in ampere) </li>
-<li><b>Sub_metering_1</b>: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered). </li>
-<li><b>Sub_metering_2</b>: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. </li>
-<li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
-</ol>
-
-## Loading the data
+% README
+% M.Carmichael
+% Sun Dec  4 13:36:45 2016
 
 
 
 
+Assignment
 
-When loading the dataset into R, please consider the following:
+The overall goal of this assignment is to explore the National Emissions Inventory database and see what it says about fine particulate matter pollution in the United States over the 10-year period 1999–2008 (its 9 years). You may use any R package you want to support your analysis.
 
-* The dataset has 2,075,259 rows and 9 columns. First
-calculate a rough estimate of how much memory the dataset will require
-in memory before reading into R. Make sure your computer has enough
-memory (most modern computers should be fine).
+Questions
 
-* We will only be using data from the dates 2007-02-01 and
-2007-02-02. One alternative is to read the data from just those dates
-rather than reading in the entire dataset and subsetting to those
-dates.
+You must address the following questions and tasks in your exploratory analysis. For each question/task you will need to make a single plot. Unless specified, you can use any plotting system in R to make your plot.
 
-* You may find it useful to convert the Date and Time variables to
-Date/Time classes in R using the `strptime()` and `as.Date()`
-functions.
+Response
 
-* Note that in this dataset missing values are coded as `?`.
+	This exercise really emphasied the clarity in instruction that is required for this type of assigment. For example, we are asked to find the "largest" chagne, but it is not identified as either percentage or absolute value.  As a result the responses can be considered interpretive. 
+
+--------------------------------------------------------------------------- 
 
 
-## Making Plots
 
-Our overall goal here is simply to examine how household energy usage
-varies over a 2-day period in February, 2007. Your task is to
-reconstruct the following plots below, all of which were constructed
-using the base plotting system.
-
-First you will need to fork and clone the following GitHub repository:
-[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
+![Total US PM2.5 Emissions Reduced from 1999-2008](plot1.png)
 
 
-For each plot you should
-
-* Construct the plot and save it to a PNG file with a width of 480
-pixels and a height of 480 pixels.
-
-* Name each of the plot files as `plot1.png`, `plot2.png`, etc.
-
-* Create a separate R code file (`plot1.R`, `plot2.R`, etc.) that
-constructs the corresponding plot, i.e. code in `plot1.R` constructs
-the `plot1.png` plot. Your code file **should include code for reading
-the data** so that the plot can be fully reproduced. You should also
-include the code that creates the PNG file.
-
-* Add the PNG file and R code file to your git repository
-
-When you are finished with the assignment, push your git repository to
-GitHub so that the GitHub version of your repository is up to
-date. There should be four PNG files and four R code files.
+Question 1: Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
 
 
-The four plots that you will need to construct are shown below. 
+Response : The graph shows a clear reduction, 23% in 2002, 25% in 2005, and a drop by 52% from the level in 1999 
+
+Base Plot 
+
+barplot(q1$sum/10^6, names.arg = q1$year, col=colq1, xlab="Years",
+  ylab = "PM2.5 Particulates Measured in Millions of Tons",
+  main="Total US PM2.5 Emissions Reduced from 1999-2008")
 
 
-### Plot 1
 
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+
+![Total PM2.5 Emissions (Baltimore Citay, MD) from 1999-2008](plot2.png)
 
 
-### Plot 2
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
-
-
-### Plot 3
-
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+Question 2 :  Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (𝚏𝚒𝚙𝚜 == "𝟸𝟺𝟻𝟷𝟶") from 1999 to 2008? Use the base plotting system to make a plot answering this question.
 
 
-### Plot 4
+Response 2 : Overall yes, with the overall reduction of 43% by 2008.  Having said that, the bargraph shows the up and down nature of change in emissions. While there is a reduction in 2002 (25%) the reduciton in 2005 is only 6% ; as noted before it drops to 43% between 1999 and  2008.
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+Base Plot 
+
+barplot(q2$sum, names.arg = q2$year, col=colq1, xlab="Years",
+  ylab = "PM2.5 Particulates Measured in Tons",
+  main="Total PM2.5 Emissions (Baltimore City, MD) from 1999-2008",
+  sub=("Overall Reduction"))
+
+
+
+
+![PM 2.5 Trends, by type of PM2.5 Emission for Baltimore City, MD](plot3.png)
+
+
+Question 3 : Of the four types of sources indicated by the 𝚝𝚢𝚙𝚎 (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999–2008 for Baltimore City?
+
+ 
+Response 3 : As the graph shows, there is a reduction of emissions in NON-POINT,NON-ROAD, and ON-ROAD. The largest drop is NON-POINT (734.4), followed NON-ROAD (467.1) and ON-ROAD (258.5)
+ 
+
+
+
+
+Question 3a : Which have seen increases in emissions from 1999–2008? 
+Response 3a : POINT emission increase by 48.1 or 16%. The interesting part of this is the 305% increase which occurs in 2005
+
+
+
+Question 3b :  Use the ggplot2 plotting system to make a plot answer this question. 
+
+Response 3b :
+
+
+q3p <- ggplot(q3, aes(x = year, y=tot, color=type)) + geom_line(size=2) +
+   xlab("YEAR") + ylab("PM2.5 Emission Totals (in TONS)") +
+   ggtitle("PM 2.5 Trends, by type of PM2.5 Emission for Baltimore City, MD") +
+   geom_text(aes(2004,110,label="trend down"),color="lightblue") +
+   geom_text(aes(2005,1000,label="trend up"),color="purple") +
+   geom_text(aes(2005,220,label="trend down"),color="lightgreen") +
+   geom_text(aes(2007,1400,label="trend down"),color="brown")  +
+   theme(panel.background=element_rect(fill="wheat"))
+
+
+
+
+![US Coal-Combustion Related Emmisions](plot3.png)
+
+
+
+Question 4 : Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
+
+
+Response 4 : The TOTAL drop parallels the drop shown in the POINT drop, with a significant drop from 2005 to 2008. The NON-POINT trend is more linear in nature,  in addition to the POINT emissions having larger numerical values than NON-POINT.
+
+
+
+
+
+![PM 2.5 Motor Vehicle Emissions Trends for Baltimore City, MD](plot3.png)
+
+
+
+Question 5 : How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City? 
+
+Response 5 : There is a 75% drop from 1999 to 2008.  The most significant drop however, occurs between 1999 and 2002, 61% and dropping only 14% between 2002 and 2008 (there is an addition 1% drop in 2005
+
+
+
+![PM 2.5 Emission Comparison Between 
+ Los Angles, CA / Baltimore City, MD](plot3.png)
+
+
+
+Question 6 : Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (𝚏𝚒𝚙𝚜 == "𝟶𝟼𝟶𝟹𝟽"). Which city has seen greater changes over time in motor vehicle emissions?
+
+Response 6 : While we see an overall 75% reduction in Baltimore City, MD in emmissions related to ON ROAD emissions, there is actally an overall increase of 4% in Los Angles. In addtion the drop is continously lowering between 1999 and 2008, while the emission are increasing for the first three years in Los Angeles (some 17%) and dropping 13% between 2005 and 2008. On a change basis the greater numeric value is in Los Angeles (670) versus Baltimore City, which has (258), while on a percentage basis Baltimore City had a greater change than Los Angeles.  
+
 
