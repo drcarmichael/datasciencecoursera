@@ -73,7 +73,7 @@ q3p <- ggplot(q3, aes(x = year, y=tot, color=type)) + geom_line(size=2) +
 readme$add.paragraph(text1)
 
 
-readme$add.paragraph('\n![US Coal-Combustion Related Emmisions](plot3.png)')
+readme$add.paragraph('\n![US Coal-Combustion Related Emmisions](plot4.png)')
 text1 <- '
 Question 4 : Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
 \n
@@ -82,7 +82,7 @@ Response 4 : The TOTAL drop parallels the drop shown in the POINT drop, with a s
 
 readme$add.paragraph(text1)
 
-readme$add.paragraph('\n![PM 2.5 Motor Vehicle Emissions Trends for Baltimore City, MD](plot3.png)')
+readme$add.paragraph('\n![PM 2.5 Motor Vehicle Emissions Trends for Baltimore City, MD](plot5.png)')
 text1 <- 
 '
 Question 5 : How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City? \n
@@ -90,7 +90,7 @@ Response 5 : There is a 75% drop from 1999 to 2008.  The most significant drop h
 
 readme$add.paragraph(text1)
 
-readme$add.paragraph('\n![PM 2.5 Emission Comparison Between \n Los Angles, CA / Baltimore City, MD](plot3.png)')
+readme$add.paragraph('\n![PM 2.5 Emission Comparison Between \n Los Angles, CA / Baltimore City, MD](plot6.png)')
 
 text1 <- '
 Question 6 : Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (𝚏𝚒𝚙𝚜 == "𝟶𝟼𝟶𝟹𝟽"). Which city has seen greater changes over time in motor vehicle emissions?\n

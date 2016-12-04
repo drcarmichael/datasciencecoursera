@@ -1,6 +1,6 @@
 % README
 % M.Carmichael
-% Sun Dec  4 13:36:45 2016
+% Sun Dec  4 13:47:29 2016
 
 
 
@@ -92,7 +92,7 @@ q3p <- ggplot(q3, aes(x = year, y=tot, color=type)) + geom_line(size=2) +
 
 
 
-![US Coal-Combustion Related Emmisions](plot3.png)
+![US Coal-Combustion Related Emmisions](plot4.png)
 
 
 
@@ -105,7 +105,7 @@ Response 4 : The TOTAL drop parallels the drop shown in the POINT drop, with a s
 
 
 
-![PM 2.5 Motor Vehicle Emissions Trends for Baltimore City, MD](plot3.png)
+![PM 2.5 Motor Vehicle Emissions Trends for Baltimore City, MD](plot5.png)
 
 
 
@@ -116,7 +116,7 @@ Response 5 : There is a 75% drop from 1999 to 2008.  The most significant drop h
 
 
 ![PM 2.5 Emission Comparison Between 
- Los Angles, CA / Baltimore City, MD](plot3.png)
+ Los Angles, CA / Baltimore City, MD](plot6.png)
 
 
 
