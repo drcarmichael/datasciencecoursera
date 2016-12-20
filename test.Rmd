@@ -3,5 +3,9 @@
 summary(cars)
 pairs(cars)
 ```
+$e^{i\pi}=-1$
+next equasion   
 
 $E=mc^2$
+next     
+$sum_{i=1}^{n}{x_i^2}$
