@@ -20,8 +20,11 @@ pairs(cars)
 
 ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
 $e^{i\pi}=-1$
+
 next equasion   
 
 $E=mc^2$
+
 next     
+
 $sum_{i=1}^{n}{x_i^2}$

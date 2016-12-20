@@ -2,6 +2,7 @@
 
 input=$1
 echo Input $input
-Rscript -e "library(knitr); knit(\"${input}\")"
-pandoc -r markdown -w html -o out.html test.md
-pandoc -r markdown -w pdf -o out.pdf test.md
+Rscript -e "library(knitr); knit(\"${input}.Rmd\")"
+#pandoc -r markdown -w html -o out.html test.md
+pandoc -s -t s5 --mathjax ${input}.md -o out.html
+wkhtmltopdf out.html out.pdf
