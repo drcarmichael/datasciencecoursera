@@ -1,6 +1,7 @@
 # Test Knitr
 ```{r}
 summary(cars)
+pairs(cars)
 ```
 
-$$ \sum_{i=1}^n X_i $$
+$E=mc^2$

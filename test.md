@@ -14,4 +14,10 @@ summary(cars)
 ##  Max.   :25.0   Max.   :120.00
 ```
 
-$$ \sum_{i=1}^n X_i $$
+```r
+pairs(cars)
+```
+
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+
+$E=mc^2$
