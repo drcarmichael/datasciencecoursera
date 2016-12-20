@@ -1,0 +1,6 @@
+#!/bin/bash
+
+input=$1
+echo Input $input
+Rscript -e "library(knitr); knit(\"${input}\")"
+pandoc -r markdown -w html -o out.html test.md

@@ -1,0 +1,6 @@
+# Test Knitr
+```{r}
+summary(cars)
+```
+
+$$ \sum_{i=1}^n X_i $$
