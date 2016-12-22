@@ -366,14 +366,17 @@ It should be noted that the assignment called for the use of knit2html, which on
 
 **Error: It seems you should call rmarkdown::render() instead of knitr::knit2html() because PA1.Rmd appears to be an R Markdown v2 document.**
 
-Given the error, I have implemented the follwoing R commands
+Given the error, I have implemented the following shell script,
+which calls R to produce the document 
 
 
 ```r
-library(knitr)
-library(rmarkdown)
-knit('PA1_template.Rmd",'PA1_template.md')
-render('PA1_tempalte.md')
+  !/bin/bash    
+
+  input=$1   
+
+  echo Input $input   
+  /usr/bin/Rscript -e "library(knitr); library(rmarkdown) ; knit(\"${input}.Rmd\",\"${input}.md\"); render(\"${input}.md\") ; browseURL(\"${input}.html\") "
 ```
 
-This can also be down at the command line using Rscript
+

@@ -292,12 +292,13 @@ print(plt3)</code></pre>
 <h1>Notes</h1>
 <p>It should be noted that the assignment called for the use of knit2html, which on the Ubuntu system I am using is depricated.</p>
 <p><strong>Error: It seems you should call rmarkdown::render() instead of knitr::knit2html() because PA1.Rmd appears to be an R Markdown v2 document.</strong></p>
-<p>Given the error, I have implemented the follwoing R commands</p>
-<pre class="r"><code>library(knitr)
-library(rmarkdown)
-knit('PA1_template.Rmd&quot;,'PA1_template.md')
-render('PA1_tempalte.md')</code></pre>
-<p>This can also be down at the command line using Rscript</p>
+<p>Given the error, I have implemented the following shell script, which calls R to produce the document</p>
+<pre class="r"><code>  !/bin/bash    
+
+  input=$1   
+
+  echo Input $input   
+  /usr/bin/Rscript -e &quot;library(knitr); library(rmarkdown) ; knit(\&quot;${input}.Rmd\&quot;,\&quot;${input}.md\&quot;); render(\&quot;${input}.md\&quot;) ; browseURL(\&quot;${input}.html\&quot;) &quot;</code></pre>
 </div>
 
 
