@@ -109,7 +109,7 @@ meannum
 ```
 ## [1] 37.3826
 ```
-So the mean is 1.0766189 &times; 10<sup>4</sup> (if we were to consider an interval mean it would be along the line of 37.3825996.      
+So the mean is 1.0766189 &times; 10<sup>4</sup> (if we were to consider an interval mean it would be along the line of 37.3825996).      
 
 
 The median is also interesting, when considered from an interval perspective.  With the number of 0's in the data, the median of all the days (even removing the NA's) is 0. so if we really looked at the median for the intvals, it would return 0, largely because of the number of large number of 0's. As a result we will take the median of the sum averages on a daily basis.
@@ -179,7 +179,7 @@ meda3
 
 So as we look a the median, and take a daily persective, if we remove the NA's and leave the 0's the median is 0, and is we remove the 0's we get a median of 56. This is because, on a daily basis there are lots of 0's and NA's in the data (on the average 80.1886792 out of 288 elements on a daily basis.  So for now we will take the median as 10765 for non zero convience. 
     
-The histogram, which reflects the frequency of values in our activity set, shown below, refects counts surrounding the mean to be the highest in the graph..
+The histogram, which reflects the frequency of values in our activity set, shown below, reflects counts surrounding the mean to be the highest in the graph..
 
 
 
@@ -195,7 +195,7 @@ print(plt)
 
 ## What is the average daily activity pattern?
 
-The pattern below shows a sharp increase in ativity at about 5:00 in the morning. This activity slows in the afternoon and then, at about 8:00 PM contines the trend to zero. The interestng element here is the dramatic increase at 7:30 to 8:30. It would be interesting to compare this data set to other factors (work type, travel type, city/country, data which was not included)  the people in the study.
+The pattern below shows a sharp increase in activity at about 5:00 in the morning. This activity slows in the afternoon and then, at about 8:00 PM contines the trend to zero. The interestng element here is the dramatic increase at 7:30 to 8:30. Furter analysis, such as comparison of this data set to other factors (work type, travel type, city/country, data which was not included) would offer greater insight.
 
 
 
