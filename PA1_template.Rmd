@@ -201,5 +201,3 @@ which calls R to produce the document
   /usr/bin/Rscript -e "library(knitr); library(rmarkdown) ; knit(\"${input}.Rmd\",\"${input}.md\"); render(\"${input}.md\") ; browseURL(\"${input}.html\") "
 
 ```
-
-
