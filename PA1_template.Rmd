@@ -1,5 +1,6 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
+author: "Martin Carmichael"
 output: 
   html_document:
     keep_md: true
@@ -7,15 +8,16 @@ output:
 
 
 ## Loading and preprocessing the data
+Program Assignment Start   
 
-Load the libraries, Read the data file, then set up the names we will be using. We also will convert the dates to date format and add a data field (day) which identifies weekdays and weekends
+Begin by loading  the libraries, reading the data file, then set up the names we will be using. We also will convert the dates to date format and add a data field (day) which identifies weekdays and weekends
 
 ```{r load-process-data}
 library(lubridate)
 library(ggplot2)
 library(dplyr)
 
-data <- read.table(file="/data/course5/RepData_PeerAssessment1/activity.csv",sep=",",comment.char="",quote="",header=TRUE)
+data <- read.table(file="activity.csv",sep=",",comment.char="",quote="",header=TRUE)
 colnames(data) <- c("steps","date","interval")
 data[,'date'] <- ymd(data[,'date'])
 data$day <- wday(data[,'date'])
@@ -27,6 +29,8 @@ data[data$day %in% weekday,]$day <- "Weekday"
 
 
 ## What is mean total number of steps taken per day?
+
+
 The first part of the analysis is to calculate the total number of steps per day.
 
 
@@ -50,7 +54,7 @@ meannum
 So the mean is `r themean` (if we were to consider an interval mean it would be along the line of `r meannum`).      
 
 
-The median is also interesting, when considered from an interval perspective.  With the number of 0's in the data, the median of all the days (even removing the NA's) is 0. so if we really looked at the median for the intvals, it would return 0, largely because of the number of large number of 0's. As a result we will take the median of the sum averages on a daily basis.
+The median is also interesting, when considered from an interval perspective.  With the number of 0's in the data, the median of all the days (even removing the NA's) is 0. so if we really looked at the median for the intervals, it would return 0, largely because of the number of large number of 0's in the vector. As a result we will take the median of the sum averages on a daily basis.
 
 
 ```{r median-number}
@@ -80,7 +84,7 @@ meda3
 
 ```
 
-So as we look a the median, and take a daily persective, if we remove the NA's and leave the 0's the median is `r meda1`, and is we remove the 0's we get a median of `r meda2`. This is because, on a daily basis there are lots of 0's and NA's in the data (on the average `r cnta1` out of `r cnta2` elements on a daily basis.  So for now we will take the median as `r themedian` for non zero convience. 
+As we look a the median, and take a daily persective, if we remove the NA's and leaving the 0's the median is `r meda1`, and is we remove the 0's we get a median of `r meda2`. This is because, on a daily basis there are lots of 0's and NA's in the data (on the average `r cnta1` out of `r cnta2` elements on a daily basis.  So for now we will take the median as `r themedian` for non zero convience. 
     
 The histogram, which reflects the frequency of values in our activity set, shown below, reflects counts surrounding the mean to be the highest in the graph..
 
@@ -96,7 +100,7 @@ print(plt)
 
 ## What is the average daily activity pattern?
 
-The pattern below shows a sharp increase in activity at about 5:00 in the morning. This activity slows in the afternoon and then, at about 8:00 PM contines the trend to zero. The interestng element here is the dramatic increase at 7:30 to 8:30. Furter analysis, such as comparison of this data set to other factors (work type, travel type, city/country, data which was not included) would offer greater insight.
+The pattern below shows a sharp increase in activity at about 5:00 in the morning. This activity slows in the afternoon and then, at about 8:00 PM contines the trend to zero. The interestng element here is the dramatic increase at 7:30 to 8:30. Further analysis, such as comparison of this data set to other factors (work type, travel type, city/country, data which was not included) would offer greater insight.
 
 
 ```{r interval-activity, fig.cap="Activity (Steps) by Interval", fig.width=15 }
@@ -139,12 +143,12 @@ newmed
 
 ```
 
-So the number missing is `r nummiss`. Now we fill in the data (new dataset data2).Next we plot and get the median and mean. There are two specific questions to address   
+The number missing is `r nummiss`. Now we fill in the data (new dataset data2).Next we plot and get the median and mean. There are two specific questions to address   
 
 ### Do these values differ from the estimates from the first part of the assignment?   
 
 
-There is no change in the mean (from `r themean` to `r newmean`) and very little in the median `r themedian` to `r newmed`.  The reason for no chage in the mean is because for every data point we add, we add the mean to that data point, which does not change the average.  In a similar fasion the median changes very little, becuase we have added the mean as in to number set being considered for the median, making a selection near it likely.
+There is no change in the mean (from `r themean` to `r newmean`) and very little in the median `r themedian` to `r newmed`.  The reason for no change in the mean is because for every data point we add, we add the mean to that data point, which does not change the average.  In a similar fashion the median changes very little, because we have added the mean to the number set being considered for the median, making a selection likely.
 
 
 ### What is the impact of inputing missing data on the estimates of the total daily number of steps?
@@ -174,7 +178,7 @@ plt4 <- plt4 + ggtitle("Comparison Of Weekday/Weekend Activity")
 print(plt4)
 ```
 
-As is shown in the plot, weekday activity is greater than the weekend activity. The activity now does not spike significantly at the 7:30 AM - 8:30 AM time frame and there is very little activity at 5:00 AM. A hypothsis might be that people do not work on the weekend, that there is less early morning activity. 
+As is shown in the plot, weekday activity is greater than the weekend activity. The activity now does not spike significantly at the 7:30 AM - 8:30 AM time frame and there is very little activity at 5:00 AM. A hypothesis might be that people do not work on the weekend, that there is less early morning activity. 
 
 
 # Notes

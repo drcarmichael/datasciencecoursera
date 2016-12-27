@@ -1,5 +1,7 @@
 #!/bin/bash
-
+#
+# Autogeenerate Script
+#
 input=$1
 
 echo Input $input
